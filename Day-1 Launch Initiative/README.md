@@ -66,7 +66,7 @@ Production‑ready templates for:
 
 To kick things off, read this:
 
-* **Introduction to Agents Whitepaper** — Released as part of *5 Days of Agents with Kaggle*
+**[Introduction to Agents Whitepaper](https://drive.google.com/file/u/0/d/1C-HvqgxM7dj4G2kCQLnuMXi1fTpXRdpx/view)** — Released as part of *5 Days of Agents with Kaggle*
 
 This gives you a powerful mental model for building and reasoning about real-world agents.
 
