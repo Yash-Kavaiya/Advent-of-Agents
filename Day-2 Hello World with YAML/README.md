@@ -84,14 +84,11 @@ adk --version
 # Create a new agent project
 adk create --type=config my_first_agent
 
-# Navigate to project
-cd my_first_agent
-
 # Add your API key to .env file
 echo "GOOGLE_API_KEY=your-api-key-here" > .env
 
 # Run the agent with web UI
-adk web .
+adk web 
 ```
 
 Open http://localhost:8000 and start chatting with your agent!
@@ -130,8 +127,7 @@ instruction: You are a friendly assistant. Greet users warmly and help answer th
 #### Run It
 
 ```bash
-cd hello_basic
-adk web .
+adk web 
 ```
 
 #### What's Happening?
@@ -180,7 +176,7 @@ tools:
 
 ```bash
 cd hello_search
-adk web .
+adk web 
 ```
 
 #### Test Prompts
@@ -398,19 +394,15 @@ def fibonacci(n: int) -> dict:
 #### Run It
 
 ```bash
-cd hello_custom
-adk web .
+adk web
 ```
 
 #### Test Prompts
 
 - "What is 15 * 24 + sqrt(144)?"
-- "Calculate the area of a circle with radius 7 (use pi * r^2)"
 - "Are these numbers prime: 17, 24, 31, 100, 97?"
-- "What's the factorial of 10?"
 - "Generate the first 15 Fibonacci numbers"
 
----
 
 ## 🤖 Multi-Agent System (Bonus)
 
@@ -557,34 +549,6 @@ adk web .
 - "Find information about renewable energy trends and create an executive summary"
 - "Research Google ADK and write a Twitter thread about its features"
 
-## 📁 Project Structure
-
-```
-adk-day2-agent-config/
-│
-├── README.md                 # This file
-│
-├── hello_basic/              # Example 1: Basic 4-line agent
-│   ├── .env
-│   └── root_agent.yaml
-│
-├── hello_search/             # Example 2: Agent with Google Search
-│   ├── .env
-│   └── root_agent.yaml
-│
-├── hello_custom/             # Example 3: Agent with custom tools
-│   ├── .env
-│   ├── root_agent.yaml
-│   └── tools.py
-│
-└── multi_agent/              # Bonus: Multi-agent system
-    ├── .env
-    ├── root_agent.yaml
-    ├── researcher_agent.yaml
-    ├── writer_agent.yaml
-    └── tools.py
-```
-
 ## 📚 Configuration Reference
 
 ### Agent Config Fields
@@ -651,16 +615,6 @@ adk deploy agent-engine \
 | `API key invalid` | Check `.env` file and regenerate key if needed |
 | `Model not found` | Verify model name (e.g., `gemini-2.0-flash`) |
 | `Tool not found` | Check tool path matches file/function name |
-
-### Debug Mode
-
-```bash
-# Run with verbose logging
-adk web . --verbose
-
-# Check agent config validity
-adk validate root_agent.yaml
-```
 
 ## 📚 Resources
 
